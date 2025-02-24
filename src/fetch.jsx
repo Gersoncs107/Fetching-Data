@@ -12,7 +12,11 @@ const Image = () => {
     }, [])
 
     return(
-
+        imageUrl &&
+        <div>
+            <h1>An Image</h1>
+            <img src={imageUrl} alt={"Placeholder text"} />
+        </div>
     )
 }
 
