@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 
 const Image = () => {
-    const [imgUrl, setImgUrl] = useState(null)
+    const [imageUrl, setImageUrl] = useState(null)
 
     useEffect( ()=> {
-        fetch()
+        fetch("https://jsonplaceholder.typicode.com/photos", {mode: "cors"})
+        .then((response)=> response.json())
+        .then((response)=> setImageUrl(response[0].url))
+
     }, [])
 }
 
