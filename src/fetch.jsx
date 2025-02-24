@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const Image = () => {
   const [imageURL, setImageURL] = useState(null);
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos", { mode: "cors" })
@@ -10,6 +11,7 @@ const Image = () => {
       .catch((error) => console.error(error));
   }, []);
 
+   if(error) return <p>A network error was encountered</p> 
   return (
     imageURL && (
       <>
