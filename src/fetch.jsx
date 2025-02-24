@@ -7,8 +7,13 @@ const Image = () => {
         fetch("https://jsonplaceholder.typicode.com/photos", {mode: "cors"})
         .then((response)=> response.json())
         .then((response)=> setImageUrl(response[0].url))
+        .catch((error)=> console.error(error))
 
     }, [])
+
+    return(
+
+    )
 }
 
 export default Image
