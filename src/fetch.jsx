@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 
-const fetch = () => {
+const Image = () => {
     const [imgUrl, setImgUrl] = useState(null)
+
+    useEffect( ()=> {
+        fetch()
+    }, [])
 }
+
+export default Image
