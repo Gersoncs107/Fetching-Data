@@ -6,7 +6,12 @@ const Image = () => {
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos", { mode: "cors" })
-      .then((response) => response.json())
+      .then((response) => {
+        if(response.status >= 400) {
+            throw new Error("Server Error")
+        }
+        return response.json()
+      })
       .then((response) => setImageURL(response[0].url))
       .catch((error) => console.error(error));
   }, []);
