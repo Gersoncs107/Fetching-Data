@@ -14,7 +14,8 @@ const Image = () => {
         return response.json()
       })
       .then((response) => setImageURL(response[0].url))
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(()=> setLoading(false))
   }, []);
 
    if(error) return <p>A network error was encountered</p> 
