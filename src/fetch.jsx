@@ -18,7 +18,8 @@ const Image = () => {
       .finally(()=> setLoading(false))
   }, []);
 
-   if(error) return <p>A network error was encountered</p> 
+    if(loading) return <p>Loading...</p>
+    if(error) return <p>A network error was encountered</p> 
   return (
     imageURL && (
       <>
