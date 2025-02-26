@@ -6,7 +6,7 @@ const useImageUrl = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("https://picsum.photos/v2/list?page=1&limit=10", { mode: "cors" })
+    fetch("https://randomuser.me/api/?results=10", { mode: "cors" })
       .then((response) => {
         if(response.status >= 400) {
             throw new Error("Server Error")
