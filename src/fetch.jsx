@@ -14,7 +14,7 @@ const useImageUrl = () => {
         return response.json()
       })
       .then((response) => setImageURL(response[0].url))
-      .catch((error) => console.error(error))
+      .catch((error) => setError(error))
       .finally(()=> setLoading(false))
   }, []);
 
