@@ -6,14 +6,14 @@ const useImageUrl = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos", { mode: "cors" })
+    fetch("https://picsum.photos/v2/list?page=1&limit=10", { mode: "cors" })
       .then((response) => {
         if(response.status >= 400) {
             throw new Error("Server Error")
         }
         return response.json()
       })
-      .then((response) => setImageURL(response[0].url))
+      .then((response) => setImageURL(response.results[0].picture.large))
       .catch((error) => setError(error))
       .finally(()=> setLoading(false))
   }, []);
