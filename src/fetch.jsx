@@ -31,7 +31,7 @@ const useImageUrl = () => {
 };
 
 const Image = ()=> {
-  
+  const {imageURL, error, loading} = useImageUrl()
 }
 
 export default Image;
