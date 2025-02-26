@@ -18,8 +18,7 @@ const useImageUrl = () => {
       .finally(()=> setLoading(false))
   }, []);
 
-    if(loading) return <p>Loading...</p>
-    if(error) return <p>A network error was encountered</p> 
+    
   return (
     imageURL && (
       <>
@@ -32,6 +31,11 @@ const useImageUrl = () => {
 
 const Image = ()=> {
   const {imageURL, error, loading} = useImageUrl()
+
+  if(loading) return <p>Loading...</p>
+  if(error) return <p>A network error was encountered</p> 
+
+  
 }
 
 export default Image;
