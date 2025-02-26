@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Image = () => {
+const useImageUrl = () => {
   const [imageURL, setImageURL] = useState(null);
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -29,5 +29,9 @@ const Image = () => {
     )
   );
 };
+
+const Image = ()=> {
+  
+}
 
 export default Image;
