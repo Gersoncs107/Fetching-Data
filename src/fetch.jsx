@@ -19,14 +19,7 @@ const useImageUrl = () => {
   }, []);
 
     
-  return (
-    imageURL && (
-      <>
-        <h1>An image</h1>
-        <img src={imageURL} alt={"placeholder text"} />
-      </>
-    )
-  );
+  return {imageURL, error, loading}
 };
 
 const Image = ()=> {
@@ -35,7 +28,12 @@ const Image = ()=> {
   if(loading) return <p>Loading...</p>
   if(error) return <p>A network error was encountered</p> 
 
-  
+  return(
+    <>
+        <h1>An image</h1>
+        <img src={imageURL} alt={"placeholder text"} />
+      </>
+  )
 }
 
 export default Image;
