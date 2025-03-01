@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const Component = () => {
+const Component = ()=>{
     const [data, setData] = useState()
 
     useEffect(()=> {
