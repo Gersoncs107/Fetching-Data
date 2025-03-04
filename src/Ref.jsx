@@ -5,6 +5,7 @@ const ButtonComponent = () => {
 
     useEffect(()=> {
         buttonRef.current.focus()
+        buttonRef.current.textContent = "Hey, I'm different!"
     }, [])
 
     return(
