@@ -6,16 +6,19 @@ const ButtonComponent = () => {
     useEffect(()=> {
         buttonRef.current.focus()
         buttonRef.current.textContent = "Hey, I'm different!"
-        let timeout = setTimeout(()=> {
+        let temeout = setTimeout(()=> {
             buttonRef.current.textContent = "Click Me!"
         }, 2000)
+        
+        return () => {
+            clearTimeout(timeout)
+        }
+
     }, [])
 
-    return () => {
-        clearTimeout(timeout)
-    }
-        // <button ref={buttonRef}>Click Me!</button>
-    
+    return(
+        <button ref={buttonRef}>Click Me!</button>
+    )
 }
 
 export default ButtonComponent
