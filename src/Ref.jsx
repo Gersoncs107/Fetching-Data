@@ -4,7 +4,7 @@ const ButtonComponent = () => {
     const buttonRef = useRef(null)
 
     useEffect(()=> {
-
+        buttonRef.current.focus()
     }, [])
 
     return(
