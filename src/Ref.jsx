@@ -11,11 +11,11 @@ const ButtonComponent = () => {
         }, 2000)
     }, [])
 
-    return( () => {
+    return () => {
         clearTimeout(timeout)
     }
         // <button ref={buttonRef}>Click Me!</button>
-    )
+    
 }
 
 export default ButtonComponent
