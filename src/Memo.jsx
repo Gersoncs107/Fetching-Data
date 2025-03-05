@@ -19,3 +19,19 @@ const ButtonComponent = ({children, onClick}) => {
         </button>
     )
 }
+
+export default function Counter() {
+    
+    const [count, setCount] = useState()
+
+    const handleClick =()=> {
+        setCount((prevState) => prevState + 1)
+    }
+
+    return(
+        <div>
+            <h1>{count}</h1>
+            <ButtonComponent onClick={handleClick}>Click Me!</ButtonComponent>
+        </div>
+    )
+}
