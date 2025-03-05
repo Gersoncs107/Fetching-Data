@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const ButtonComponent = ({ children, onClick }) => {
   let i = 0;
@@ -22,9 +22,9 @@ const ButtonComponent = ({ children, onClick }) => {
 export default function Counter() {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
+  const handleClick = useMemo(() => {
     setCount((prevState) => prevState + 1);
-  };
+  })
 
   return (
     <div>
