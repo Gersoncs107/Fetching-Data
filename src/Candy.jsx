@@ -1,7 +1,9 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 function CandyDispenser() {
-    const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
+    const initialCandies = useMemo(()=> {
+        ['snickers', 'skittles', 'twix', 'milky way'], []
+    })
     const [candies, setCandies] = useState(initialCandies)
 
     const dispense = (candy) => {
