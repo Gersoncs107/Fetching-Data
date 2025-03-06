@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const CountButton = ({onClick, count}){
+const CountButton = ({onClick, count}) => {
     return(
         <button onClick={onClick}>{count}</button>
     )
@@ -21,3 +21,4 @@ const DualCounter = () => {
     )
 }
 
+export default DualCounter
