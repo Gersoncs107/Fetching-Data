@@ -5,6 +5,12 @@ function CandyDispenser() {
     const [candies, setCandies] = useState(initialCandies)
 
     const dispense = (candy) => {
-        setCandies(allCandies => allCandies.filter())
+        setCandies(allCandies => allCandies.filter(c => c !== candy))
     }
+
+    return(
+        <div>
+            
+        </div>
+    )
 }
