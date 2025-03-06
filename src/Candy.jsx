@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 
 const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
 
-function CandyDispenser() {
+export default function CandyDispenser() {
     const [candies, setCandies] = useState(initialCandies)
 
     const dispense = (candy) => {
