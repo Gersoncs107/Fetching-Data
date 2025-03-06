@@ -1,9 +1,8 @@
 import { useCallback, useMemo, useState } from "react";
 
+const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']
+
 function CandyDispenser() {
-    const initialCandies = useMemo(()=> {
-        ['snickers', 'skittles', 'twix', 'milky way'], []
-    })
     const [candies, setCandies] = useState(initialCandies)
 
     const dispense = (candy) => {
