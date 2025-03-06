@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { memo, useState } from "react"
 
-function CountButton({onClick, count}) {
-    return <button onClick={onClick}>{count}</button>
-  }
-  
+
+const CountButton = memo(function CountButton({onClick, count}) {
+  return <button onClick={onClick}>{count}</button>
+}
+)
+
 export default function DualCounter() {
     const [count1, setCount1] = useState(0)
     const increment1 = () => setCount1(c => c + 1)
