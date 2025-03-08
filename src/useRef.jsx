@@ -16,3 +16,16 @@ export default function FormComponent() {
           alert('name cannot be blank')
         }
       }
+
+      return (
+        <form onSubmit={handleSubmit}>
+          <input
+            id="name"
+            name="full name"
+            type="text"
+            value={name}
+            onChange={handleChange}
+            placeholder="full name"
+          />
+        </form>
+      )}
