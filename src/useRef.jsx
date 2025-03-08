@@ -6,3 +6,13 @@ export default function FormComponent() {
     const handleChange = (e) => {
       setName(e.target.value)
     }
+
+    const handleSubmit = () => {
+        const nameInput = document.querySelector('#name').value
+     
+        // checks if the input field is empty.
+        // if it is an alert is fired.
+        if (nameInput === '') {
+          alert('name cannot be blank')
+        }
+      }
