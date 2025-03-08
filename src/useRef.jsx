@@ -51,4 +51,4 @@ export default function FormComponent() {
             placeholder="full name"
           />
         </form>
-      )}
+      )
