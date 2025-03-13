@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React from "react";
 
 export default function FormComponent(params) {
      const [name, setName] = React.useState('')
