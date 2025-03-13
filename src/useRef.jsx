@@ -13,5 +13,10 @@ export default function FormComponent() {
         if (nameInput === '') {
           alert('name cannot be blank')
         }
-      }  
+      }
+      return(
+        <form action="">
+            
+        </form>
+      )  
 }
