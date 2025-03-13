@@ -15,7 +15,7 @@ export default function FormComponent() {
         }
       }
       return(
-        <form action="">
+        <form onSubmit={handleSubmit}>
             
         </form>
       )  
