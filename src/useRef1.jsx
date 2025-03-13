@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import React from "react";
 
 export default function FormComponent(params) {
      const [name, setName] = React.useState('')
@@ -17,7 +16,6 @@ export default function FormComponent(params) {
           alert('name cannot be blank')
         }
       }
-
       return(
         <form onSubmit={handleSubmit}>
           <input
